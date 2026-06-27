@@ -91,7 +91,7 @@ export async function POST(req: NextRequest) {
   const { address, note } = eventDetails.location;
 
   // ---- Host notification ----
-  const hostText = `A new resident of the Semicentennial has broken under cross-examination
+  const hostText = `A new suspect has cracked under the immense pressure of a web form
 and submitted an RSVP response.
 
 --- SUSPECT INPUT DOSSIER ---
@@ -111,7 +111,7 @@ print their name tag, and stack their starting Freedom Bucks.`;
 
   const hostHtml = `
     <div style="font-family:Georgia,serif;color:#1B2A4A;max-width:600px">
-      <p>A new resident of the Semicentennial has broken under cross-examination and submitted an RSVP response.</p>
+      <p>A new suspect has cracked under the immense pressure of a web form and submitted an RSVP response.</p>
       <h3 style="color:#7B1E1E;border-bottom:2px solid #7B1E1E;padding-bottom:4px">SUSPECT INPUT DOSSIER</h3>
       <p>👤 <strong>Guest Real Name:</strong> ${safe.name}<br/>
       📬 <strong>Attendance Status:</strong> ${safe.attendanceStatus}<br/>
@@ -126,7 +126,8 @@ print their name tag, and stack their starting Freedom Bucks.`;
 
   // ---- Guest confirmation ----
   const guestText = `You're confirmed, suspect. Your statement has been filed with the
-Semicentennial Investigation Bureau.
+Semicentennial Investigation Bureau, where it will be cross-referenced,
+judged, and lightly mocked in a group chat you are not part of.
 
 🎭 Your designated identity: ${suspectChoice}
 
@@ -140,7 +141,7 @@ Text ${eventDetails.questionsPhone}.`;
 
   const guestHtml = `
     <div style="font-family:Georgia,serif;color:#1B2A4A;max-width:600px">
-      <p>You're confirmed, suspect. Your statement has been filed with the <strong>Semicentennial Investigation Bureau</strong>.</p>
+      <p>You're confirmed, suspect. Your statement has been filed with the <strong>Semicentennial Investigation Bureau</strong>, where it will be cross-referenced, judged, and lightly mocked in a group chat you are not part of.</p>
       <p>🎭 <strong>Your designated identity:</strong> ${safe.suspectChoice}</p>
       <p>We'll see you on <strong>${eventDetails.dateDisplay}</strong> at <strong>${eventDetails.timeDisplay}</strong> at<br/>
       <strong>${escapeHtml(address)}</strong></p>

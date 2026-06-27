@@ -6,27 +6,27 @@ const steps = [
   {
     icon: "🎭",
     title: "Arrive in Character",
-    body: "Review the suspect list, pick one (or invent your own), and commit to a costume. High-effort, over-the-top is encouraged.",
+    body: "Review the suspect list, pick one (or invent your own), and commit to a costume like your alibi depends on it. Because it does. Subtlety will not be rewarded.",
   },
   {
     icon: "✉️",
     title: "Envelope A (At the Door)",
-    body: "The host hands you your physical Phase A envelope: secret objectives, blackmail material, and starting “Freedom Bucks.”",
+    body: "The host hands you your classified Phase A envelope: a secret objective, leverage on a stranger, and starting “Freedom Bucks” — our patriotic, completely unregulated currency.",
   },
   {
     icon: "🎬",
     title: "The Catastrophe Strikes Live",
-    body: "No scripted reading. The first ~45 minutes is mingling and trading secrets. Then a live theatrical “incident” occurs.",
+    body: "No scripted reading, no rehearsal. The first ~45 minutes is mingling and quietly selling each other out. Then a live theatrical “incident” occurs, and several alibis immediately fall apart.",
   },
   {
     icon: "✉️",
     title: "Envelope B (After the Incident)",
-    body: "Reveals how your secrets connect to the murder weapon and the culprit.",
+    body: "Reveals exactly how your secret connects to the murder weapon, the culprit, and — most damning of all — you.",
   },
   {
     icon: "💰",
     title: "Social Sleuthing",
-    body: "The mystery is solved through socializing, bribery, and trading dirty laundry over real drinks.",
+    body: "The case is cracked the old-fashioned way: socializing, light bribery, real drinks, and the unhinged trading of everyone's dirty laundry until somebody breaks.",
   },
 ];
 
@@ -41,7 +41,7 @@ export default function HowItWorks() {
           <ChapterMark roman="III" total={chapters.length} />
           <h2 className="section-title text-center mb-2">How It Works</h2>
           <p className="text-center font-stamp uppercase tracking-[0.25em] text-xs text-barn mb-8">
-            In-person rules of engagement
+Rules of engagement. Yes, there are rules. No, you don't get a lawyer.
           </p>
         </Reveal>
 

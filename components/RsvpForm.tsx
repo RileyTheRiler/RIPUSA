@@ -70,17 +70,17 @@ export default function RsvpForm() {
 
   function validate(): boolean {
     const next: Errors = {};
-    if (!form.name.trim()) next.name = "We need a name for the record, suspect.";
+    if (!form.name.trim()) next.name = "The Bureau requires a name for the record, suspect.";
     if (!form.email.trim()) {
-      next.email = "An email is required to file your confirmation.";
+      next.email = "No email, no confirmation, no alibi. Try again.";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) {
-      next.email = "That email doesn't look quite right.";
+      next.email = "That's not an email. That's barely a sentence.";
     }
     if (!form.suspectChoice) {
-      next.suspectChoice = "Choose an identity (or invent one).";
+      next.suspectChoice = "Choose an identity. The Bureau does not accept 'undecided.'";
     }
     if (isCustom && !form.customAlibi.trim()) {
-      next.customAlibi = "Custom suspects must describe their character.";
+      next.customAlibi = "Custom suspects must describe their character. Bureau doesn't do mystery-meat identities.";
     }
     setErrors(next);
     return Object.keys(next).length === 0;
@@ -139,13 +139,16 @@ export default function RsvpForm() {
               Your testimony has been logged, suspect.
             </h2>
             <p className="font-serif text-lg text-navy/85">
-              Your statement is on file with the Semicentennial Investigation
-              Bureau. Check your email for written confirmation — including the
-              address (double-check it, it&apos;s near City Park, NOT 2701 S York
-              St).
+              Your statement is now on file with the Semicentennial
+              Investigation Bureau, where it will be read, judged, and possibly
+              used against you. Check your email for written confirmation —
+              including the address (double-check it, it&apos;s near City Park,
+              NOT 2701 S York St — that address has had a long enough year
+              already).
             </p>
             <p className="mt-4 text-navy/70">
-              Come dressed for the part — and bring your best alibi.
+              Come dressed for the part, bring your best alibi, and remember:
+              the Bureau is always watching. Mostly metaphorically.
             </p>
           </div>
         </div>
@@ -180,7 +183,7 @@ export default function RsvpForm() {
                 value={form.name}
                 onChange={update("name")}
                 className="field-input"
-                placeholder="Your actual, legal, non-alias name"
+                placeholder="Your real, legal, taxable name (no aliases — yet)"
                 aria-invalid={!!errors.name}
               />
               {errors.name && (
@@ -236,7 +239,8 @@ export default function RsvpForm() {
                 ))}
               </select>
               <p className="text-xs text-navy/60 mt-1">
-                Duplicate picks are sorted out by the host after RSVPs close.
+                Duplicate picks are resolved by the host via methods the host
+                will not be disclosing in advance.
               </p>
               {errors.suspectChoice && (
                 <p className="text-barn text-sm mt-1">{errors.suspectChoice}</p>
@@ -255,7 +259,7 @@ export default function RsvpForm() {
                   onChange={update("customAlibi")}
                   rows={4}
                   className="field-input resize-y"
-                  placeholder="Describe your custom American character: name, historical background, and their hypothetical satirical motive for wanting to end America."
+                  placeholder="Describe your custom American character: name, historical background, and their deeply unconvincing motive for wanting America gone."
                   aria-invalid={!!errors.customAlibi}
                 />
                 {errors.customAlibi && (
@@ -275,7 +279,7 @@ export default function RsvpForm() {
                 value={form.dietaryRestrictions}
                 onChange={update("dietaryRestrictions")}
                 className="field-input"
-                placeholder="Allergies, vegetarian/vegan, etc. — leave blank if none."
+                placeholder="Allergies, vegetarian/vegan, sworn enemy of hot dogs, etc. — leave blank if none."
               />
             </div>
 
@@ -290,7 +294,7 @@ export default function RsvpForm() {
                 value={form.email}
                 onChange={update("email")}
                 className="field-input"
-                placeholder="Where we send your written confirmation"
+                placeholder="Where the Bureau sends your written confirmation (and nothing else, probably)"
                 aria-invalid={!!errors.email}
               />
               {errors.email && (

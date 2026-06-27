@@ -15,17 +15,20 @@ export default function Briefing() {
           <h2 className="section-title mb-6 text-center">The Briefing</h2>
           <div className="space-y-5 font-serif text-lg leading-relaxed text-navy/90">
             <p>
-              America—the great, the dramatic, the perpetually chaotic—is
-              scheduled to turn 250 years old. But rumors are swirling through
-              the grapevines of history that she won&apos;t survive long enough
-              to cut her own birthday cake.
+              America—the great, the dramatic, the chronically online—is
+              scheduled to turn 250 years old this July. Sources close to the
+              investigation describe her condition as &ldquo;stable, but
+              extremely online and deeply in debt.&rdquo; Worse: at least one of
+              her closest friends is reportedly trying to finish her off before
+              she blows out the candles.
             </p>
             <p>
               You are formally summoned to an emergency,{" "}
               <strong className="text-barn">in-person</strong> backyard
-              gathering of the nation&apos;s most eccentric icons to figure out
-              who is plotting her demise... before it&apos;s too late. Watch the
-              official intelligence briefing below.
+              intervention of the nation&apos;s most eccentric icons to identify
+              the culprit before dessert. Bureau analysts have prepared an
+              official intelligence briefing. Watch it below. Take notes. Trust
+              no one, especially the ones in costume.
             </p>
           </div>
         </div>

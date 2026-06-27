@@ -39,7 +39,7 @@ export type EventDetails = {
 export const eventDetails: EventDetails = {
   dateLocked: true,
   title: "🚨 THE CRIME OF THE SEMICENTENNIAL",
-  tagline: "Dateline: July 12, 2026",
+  tagline: "Dateline: July 12, 2026 — She's 250, broke, and still throwing the party.",
 
   // July 12, 2026, 6:30 PM Mountain Daylight Time (UTC-06:00)
   startISO: "2026-07-12T18:30:00-06:00",
@@ -51,11 +51,11 @@ export const eventDetails: EventDetails = {
   location: {
     name: "Backyard HQ — near City Park",
     address: "2701 York St, Denver, CO 80205",
-    note: "Near City Park. NOT 2701 S York St — that's a different address across town. Aim for the one by City Park.",
+    note: "Near City Park. NOT 2701 S York St — that's a quiet family home across town with zero interest in becoming a crime scene. Trust the GPS pin, not your gut; your gut also thought America was fine.",
   },
 
   refreshments:
-    "Free food and booze provided. Show up hungry, thirsty, and legally bulletproof.",
+    "Free food and booze — the last bipartisan institution left standing. Show up hungry, thirsty, and ready to plead the fifth.",
 
   questionsPhone: "720-842-2720",
 
@@ -68,10 +68,12 @@ export const eventDetails: EventDetails = {
 
 /** Human-readable description used inside the generated calendar invite. */
 export const calendarDescription = [
-  "You are summoned to an emergency, in-person backyard gathering of the nation's",
-  "most eccentric icons to figure out who is plotting America's demise.",
+  "You are summoned to an emergency, in-person backyard intervention for a",
+  "250-year-old institution who refuses to see a therapist. Help us determine",
+  "which of her so-called friends is trying to finish the job before she blows",
+  "out the candles.",
   "",
-  "Arrive in character. Refreshments provided.",
+  "Arrive in character. Refreshments provided. Alibis recommended.",
   `Questions? Text ${eventDetails.questionsPhone}.`,
   "",
   "ADDRESS NOTE: " + eventDetails.location.note,

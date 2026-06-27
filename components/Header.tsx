@@ -10,8 +10,8 @@ export default function Header() {
         {/* Decorative distressed border frame */}
         <div className="doc-card torn px-6 py-10 sm:px-12 sm:py-14 -rotate-[0.5deg]">
           <div className="mb-5 flex justify-center gap-3">
-            <span className="badge-stamp">Classified</span>
-            <span className="badge-stamp rotate-[2deg]">Top Secret</span>
+            <span className="badge-stamp">Eyes Only</span>
+            <span className="badge-stamp rotate-[2deg]">Burn After Reading</span>
           </div>
 
           <h1 className="font-serif font-black leading-[0.95] text-navy text-4xl sm:text-6xl md:text-7xl drop-shadow-sm">
@@ -33,7 +33,7 @@ export default function Header() {
         aria-label="Scroll to open the case file"
       >
         <span className="font-stamp uppercase tracking-[0.3em] text-[0.65rem]">
-          Open the Case File
+          Read at Your Own Risk
         </span>
         <span className="text-xl animate-bounce group-hover:translate-y-0.5 transition">
           ↓

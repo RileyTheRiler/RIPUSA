@@ -23,7 +23,7 @@ export default function SuspectRoster() {
           <ChapterMark roman="IV" total={chapters.length} />
           <h2 className="section-title text-center mb-2">Suspect Roster</h2>
           <p className="text-center font-stamp uppercase tracking-[0.25em] text-xs text-barn mb-8">
-            Tap or hover a redacted line to declassify it
+Tap the black bar. We both know you were going to anyway.
           </p>
         </Reveal>
 

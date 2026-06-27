@@ -46,7 +46,7 @@ export default function Logistics() {
         <div className="doc-card px-6 py-8 sm:px-10 rotate-[-0.6deg]">
           <div className="mb-5 flex items-center justify-between gap-3 flex-wrap">
             <h2 className="section-title">Party Dossier</h2>
-            <span className="badge-stamp text-xs">File #1776</span>
+            <span className="badge-stamp text-xs">File #1776 (Re-Filed Annually)</span>
           </div>
 
           <div className="divide-y divide-navy/15">
@@ -63,7 +63,7 @@ export default function Logistics() {
             <Row icon="🍾" label="Refreshments">
               {refreshments}
             </Row>
-            <Row icon="📞" label="Questions? (what to bring, plus-ones, etc.)">
+            <Row icon="📞" label="Questions? (Plus-ones, bail money, etc.)">
               <a
                 href={`tel:${questionsPhone.replace(/[^0-9]/g, "")}`}
                 className="underline decoration-barn/50 underline-offset-2 hover:text-barn"
@@ -71,7 +71,7 @@ export default function Logistics() {
                 {questionsPhone}
               </a>
             </Row>
-            <Row icon="⏳" label="RSVP Deadline">
+            <Row icon="⏳" label="RSVP Deadline (No Exceptions, Even For You, Mom)">
               {eventDetails.rsvpDeadlineDisplay}
             </Row>
           </div>
