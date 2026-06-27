@@ -3,7 +3,9 @@
 import { useState } from "react";
 import confetti from "canvas-confetti";
 import Reveal from "./Reveal";
+import ChapterMark from "./ChapterMark";
 import { suspects } from "@/lib/suspects";
+import { chapters } from "@/lib/chapters";
 import { playStampThud } from "@/lib/sound";
 
 type Status = "idle" | "submitting" | "success" | "error";
@@ -118,8 +120,12 @@ export default function RsvpForm() {
 
   if (status === "success") {
     return (
-      <section id="rsvp" className="relative z-10 px-4 py-12">
-        <div className="mx-auto max-w-xl">
+      <section
+        id="rsvp"
+        className="relative z-10 min-h-screen chapter-scene flex flex-col justify-center px-4 py-12"
+      >
+        <div className="mx-auto max-w-xl w-full">
+          <ChapterMark roman="V" total={chapters.length} />
           <div className="doc-card torn relative px-6 py-14 text-center overflow-hidden">
             {/* Ink stamp */}
             <div className="pointer-events-none absolute right-4 top-4 sm:right-8 animate-stampIn">
@@ -148,8 +154,12 @@ export default function RsvpForm() {
   }
 
   return (
-    <section id="rsvp" className="relative z-10 px-4 py-12">
-      <Reveal className="mx-auto max-w-xl">
+    <section
+      id="rsvp"
+      className="relative z-10 min-h-screen chapter-scene flex flex-col justify-center px-4 py-12"
+    >
+      <Reveal className="mx-auto max-w-xl w-full">
+        <ChapterMark roman="V" total={chapters.length} />
         <div className="doc-card px-6 py-8 sm:px-10 rotate-[0.3deg]">
           <div className="mb-6 text-center">
             <h2 className="section-title">Submit Your Testimony</h2>

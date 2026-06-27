@@ -1,10 +1,16 @@
 import Reveal from "./Reveal";
 import VideoEmbed from "./VideoEmbed";
+import ChapterMark from "./ChapterMark";
+import { chapters } from "@/lib/chapters";
 
 export default function Briefing() {
   return (
-    <section className="relative z-10 px-4 py-12">
-      <Reveal className="mx-auto max-w-3xl">
+    <section
+      id="briefing"
+      className="relative z-10 min-h-screen chapter-scene flex flex-col justify-center px-4 py-12"
+    >
+      <Reveal className="mx-auto max-w-3xl w-full">
+        <ChapterMark roman="I" total={chapters.length} />
         <div className="doc-card px-6 py-8 sm:px-10 sm:py-10 rotate-[0.4deg]">
           <h2 className="section-title mb-6 text-center">The Briefing</h2>
           <div className="space-y-5 font-serif text-lg leading-relaxed text-navy/90">

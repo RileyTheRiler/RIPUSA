@@ -2,7 +2,10 @@ import { eventDetails } from "@/lib/eventDetails";
 
 export default function Header() {
   return (
-    <header className="relative z-10 px-4 pt-12 pb-8 sm:pt-16">
+    <header
+      id="cover"
+      className="relative z-10 min-h-screen chapter-scene flex flex-col items-center justify-center px-4 py-12"
+    >
       <div className="mx-auto max-w-3xl text-center">
         {/* Decorative distressed border frame */}
         <div className="doc-card torn px-6 py-10 sm:px-12 sm:py-14 -rotate-[0.5deg]">
@@ -22,6 +25,20 @@ export default function Header() {
           </p>
         </div>
       </div>
+
+      <a
+        href="#briefing"
+        className="group mt-10 flex flex-col items-center gap-2 text-navy/60 hover:text-barn transition opacity-0 animate-fadeUp"
+        style={{ animationDelay: "0.6s" }}
+        aria-label="Scroll to open the case file"
+      >
+        <span className="font-stamp uppercase tracking-[0.3em] text-[0.65rem]">
+          Open the Case File
+        </span>
+        <span className="text-xl animate-bounce group-hover:translate-y-0.5 transition">
+          ↓
+        </span>
+      </a>
     </header>
   );
 }
