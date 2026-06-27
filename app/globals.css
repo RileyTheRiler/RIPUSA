@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background-color: #f4ead4;
+  color: #1b2a4a;
+  /* Aged-paper vignette so edges feel tea-stained, not flat. */
+  background-image:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(244, 234, 212, 0) 0%,
+      rgba(123, 30, 30, 0.05) 70%,
+      rgba(27, 42, 74, 0.12) 100%
+    );
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* ------------------------------------------------------------------ */
+/* Paper grain — pure CSS SVG noise, low opacity, behind everything.   */
+/* ------------------------------------------------------------------ */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.07;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ------------------------------------------------------------------ */
+/* Reusable themed component classes                                   */
+/* ------------------------------------------------------------------ */
+@layer components {
+  /* Dossier / document card — parchment with a barn-red border. */
+  .doc-card {
+    @apply relative bg-parchment-light border-2 border-navy/30 shadow-[0_10px_30px_-10px_rgba(27,42,74,0.5)];
+    background-image:
+      linear-gradient(rgba(244, 234, 212, 0.4), rgba(244, 234, 212, 0.4));
+  }
+
+  /* Torn / burnt edge effect via clip-path (no image asset). */
+  .torn {
+    clip-path: polygon(
+      0% 2%, 4% 0%, 12% 2%, 22% 0%, 33% 2%, 44% 0%, 55% 2%, 66% 0%,
+      77% 2%, 88% 0%, 96% 2%, 100% 1%, 100% 98%, 96% 100%, 88% 98%,
+      77% 100%, 66% 98%, 55% 100%, 44% 98%, 33% 100%, 22% 98%,
+      12% 100%, 4% 98%, 0% 99%
+    );
+  }
+
+  /* Ornate double border for the video frame. */
+  .ornate-frame {
+    @apply border-4 border-navy;
+    box-shadow:
+      0 0 0 3px #f4ead4,
+      0 0 0 6px #7b1e1e,
+      0 0 0 9px #f4ead4,
+      0 0 0 11px #1b2a4a,
+      0 18px 40px -12px rgba(27, 42, 74, 0.7);
+  }
+
+  /* Distressed stamp-style badge. */
+  .badge-stamp {
+    @apply font-stamp uppercase tracking-[0.25em] text-barn border-2 border-barn px-3 py-1 rotate-[-3deg] inline-block;
+    box-shadow: inset 0 0 0 1px rgba(123, 30, 30, 0.4);
+  }
+
+  .section-title {
+    @apply font-serif font-extrabold text-navy text-3xl sm:text-4xl md:text-5xl tracking-tight;
+  }
+
+  /* Form inputs */
+  .field-label {
+    @apply block font-stamp uppercase tracking-widest text-xs text-navy/80 mb-1;
+  }
+  .field-input {
+    @apply w-full bg-parchment border border-navy/40 px-3 py-2 text-navy placeholder:text-navy/40
+      focus:outline-none focus:ring-2 focus:ring-barn/60 focus:border-barn rounded-sm transition;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Redaction bar — covers text until hover (desktop) / .revealed (tap). */
+/* ------------------------------------------------------------------ */
+.redacted {
+  position: relative;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: color 0.25s ease;
+  color: transparent;
+}
+.redacted::after {
+  content: "";
+  position: absolute;
+  inset: -1px -2px;
+  background: #1b2a4a;
+  border-radius: 2px;
+  transition: opacity 0.25s ease;
+}
+.redacted:hover,
+.redacted:focus-visible,
+.redacted.revealed {
+  color: inherit;
+}
+.redacted:hover::after,
+.redacted:focus-visible::after,
+.redacted.revealed::after {
+  opacity: 0;
+}
+
+/* ------------------------------------------------------------------ */
+/* Scroll reveal — initial hidden state; .is-visible animates in.      */
+/* ------------------------------------------------------------------ */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .animate-stampIn,
+  .animate-fadeUp {
+    animation: none !important;
+  }
+}
