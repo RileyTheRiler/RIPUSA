@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import Reveal from "./Reveal";
+import ChapterMark from "./ChapterMark";
 import { suspects, cardTilt } from "@/lib/suspects";
+import { chapters } from "@/lib/chapters";
 
 export default function SuspectRoster() {
   // Track which cards have been tapped (mobile reveal).
@@ -12,9 +14,13 @@ export default function SuspectRoster() {
     setRevealed((prev) => ({ ...prev, [i]: !prev[i] }));
 
   return (
-    <section className="relative z-10 px-4 py-12">
-      <div className="mx-auto max-w-5xl">
+    <section
+      id="roster"
+      className="relative z-10 min-h-screen chapter-scene flex flex-col justify-center px-4 py-12"
+    >
+      <div className="mx-auto max-w-5xl w-full">
         <Reveal>
+          <ChapterMark roman="IV" total={chapters.length} />
           <h2 className="section-title text-center mb-2">Suspect Roster</h2>
           <p className="text-center font-stamp uppercase tracking-[0.25em] text-xs text-barn mb-8">
             Tap or hover a redacted line to declassify it

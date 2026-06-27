@@ -1,4 +1,6 @@
 import Reveal from "./Reveal";
+import ChapterMark from "./ChapterMark";
+import { chapters } from "@/lib/chapters";
 
 const steps = [
   {
@@ -30,9 +32,13 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="relative z-10 px-4 py-12">
-      <div className="mx-auto max-w-3xl">
+    <section
+      id="procedure"
+      className="relative z-10 min-h-screen chapter-scene flex flex-col justify-center px-4 py-12"
+    >
+      <div className="mx-auto max-w-3xl w-full">
         <Reveal>
+          <ChapterMark roman="III" total={chapters.length} />
           <h2 className="section-title text-center mb-2">How It Works</h2>
           <p className="text-center font-stamp uppercase tracking-[0.25em] text-xs text-barn mb-8">
             In-person rules of engagement

@@ -1,7 +1,9 @@
 import Reveal from "./Reveal";
 import Countdown from "./Countdown";
 import AddToCalendar from "./AddToCalendar";
+import ChapterMark from "./ChapterMark";
 import { eventDetails } from "@/lib/eventDetails";
+import { chapters } from "@/lib/chapters";
 
 function Row({
   icon,
@@ -31,8 +33,12 @@ export default function Logistics() {
   const { location, refreshments, questionsPhone } = eventDetails;
 
   return (
-    <section className="relative z-10 px-4 py-12">
-      <Reveal className="mx-auto max-w-2xl">
+    <section
+      id="dossier"
+      className="relative z-10 min-h-screen chapter-scene flex flex-col justify-center px-4 py-12"
+    >
+      <Reveal className="mx-auto max-w-2xl w-full">
+        <ChapterMark roman="II" total={chapters.length} />
         <div className="mb-6 flex justify-center">
           <Countdown />
         </div>
