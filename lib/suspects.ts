@@ -1,10 +1,6 @@
 /**
  * Suspect roster. `redacted` is the portion of the bio hidden behind a black
  * "[REDACTED]" bar until hover/tap (see SuspectRoster component).
- *
- * NOTE ON SATIRE: these characters allude to real public figures without naming
- * them. Keep it that way — the parody works through allusion, and it stays
- * lighter and safer on a public URL.
  */
 
 export type Suspect = {
