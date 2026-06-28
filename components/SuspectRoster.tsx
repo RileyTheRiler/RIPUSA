@@ -43,6 +43,12 @@ export default function SuspectRoster() {
                   </span>
                 </div>
 
+                {s.archetype && (
+                  <p className="font-stamp uppercase tracking-[0.15em] text-[0.65rem] text-barn mb-1">
+                    {s.archetype}
+                  </p>
+                )}
+
                 <h3 className="font-serif font-bold text-lg text-navy leading-snug mb-2">
                   {s.name}
                 </h3>
