@@ -49,6 +49,90 @@ export const suspects: Suspect[] = [
     redacted: "with a massive legal chip on his shoulder.",
   },
   {
+    value: "The Soft Power Diplomat (Charmin Bear)",
+    emoji: "🧸",
+    name: "The Soft Power Diplomat (Charmin Bear)",
+    bio: "Disarmingly gentle, never raises his voice,",
+    redacted: "suspiciously interested in everyone's \"comfort.\"",
+  },
+  {
+    value: "The Anarchist Trickster (Bugs Bunny)",
+    emoji: "🐰",
+    name: "The Anarchist Trickster (Bugs Bunny)",
+    bio: "Wisecracking rabbit, smarter than everyone in the room,",
+    redacted: "allegiance unclear, has been running this con since before the country existed.",
+  },
+  {
+    value: "The Risk Auditor (Flo)",
+    emoji: "📋",
+    name: "The Risk Auditor (Flo)",
+    bio: "Relentlessly upbeat, always selling something,",
+    redacted: "has calculated that the nation's collapse is actuarially profitable for her.",
+  },
+  {
+    value: "The Founding Eccentric (Franklin)",
+    emoji: "🪁",
+    name: "The Founding Eccentric (Franklin)",
+    bio: "Kite-flying, lightning-chasing elder statesman,",
+    redacted: "privately feels this is all so far from his original vision it should just end.",
+  },
+  {
+    value: "The Overachiever (Hamilton)",
+    emoji: "🖋️",
+    name: "The Overachiever (Hamilton)",
+    bio: "Fast-talking, can't stop writing, treats small talk like a Cabinet battle,",
+    redacted: "chronically under-credited and done waiting for his due.",
+  },
+  {
+    value: "The Strongman of Softness (Brawny)",
+    emoji: "🪵",
+    name: "The Strongman of Softness (Brawny)",
+    bio: "Flannel-clad, helpful to a fault, insists on \"handling things\" physically,",
+    redacted: "secretly emasculated by a lifetime of being \"just a paper towel guy.\"",
+  },
+  {
+    value: "The Self-Appointed Detective (Velma)",
+    emoji: "🔍",
+    name: "The Self-Appointed Detective (Velma)",
+    bio: "Constantly \"solving\" the case out loud, losing and finding her glasses dramatically,",
+    redacted: "tired of always finding the mystery and never getting to be it.",
+  },
+  {
+    value: "The Midnight Oracle (Taco Bell)",
+    emoji: "🔔",
+    name: "The Midnight Oracle (Taco Bell)",
+    bio: "Speaks only in chimes and cryptic late-night cravings wisdom,",
+    redacted: "resents the structured, daylight nature of a nation entirely.",
+  },
+  {
+    value: "The Cookie Cartel Boss (Girl Scout)",
+    emoji: "🍪",
+    name: "The Cookie Cartel Boss (Girl Scout)",
+    bio: "Sweet, earnest, sells badges and cookies and \"troop dues\" with ruthless instinct,",
+    redacted: "has run the numbers and her cookie empire would be more profitable as its own micro-nation.",
+  },
+  {
+    value: "The Teen Super-Spy (Kim Possible)",
+    emoji: "📡",
+    name: "The Teen Super-Spy (Kim Possible)",
+    bio: "Hyper-competent, treats the party itself like a covert op,",
+    redacted: "has decided that if nobody's funding her missions, she'll let one go wrong on purpose.",
+  },
+  {
+    value: "The Silent Operative (Perry)",
+    emoji: "🕶️",
+    name: "The Silent Operative (Perry)",
+    bio: "Says literally nothing all party, wears a fedora, watches everything,",
+    redacted: "decades of unrecognized secret-agent work have finally caught up with him.",
+  },
+  {
+    value: "The Fallen Fast-Food King (Ronald)",
+    emoji: "🤡",
+    name: "The Fallen Fast-Food King (Ronald)",
+    bio: "Try-hard nostalgic energy, name-drops \"the good old days\" of fast food dominance,",
+    redacted: "watched his empire get out-marketed by every mascot in the room.",
+  },
+  {
     value: "Custom Suspect",
     emoji: "🎭",
     name: "Custom Suspect",
@@ -59,4 +143,7 @@ export const suspects: Suspect[] = [
 ];
 
 /** Slight, FIXED rotation per card (deg) for the "pinned to a board" look. */
-export const cardTilt = [-1.4, 1.1, -0.8, 1.5, -1.2];
+export const cardTilt = [
+  -1.4, 1.1, -0.8, 1.5, -1.2, 0.9, -1.6, 1.3, -0.6, 1.0, -1.3, 0.7, -1.1, 1.4,
+  -0.9, 1.2,
+];
