@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Reveal from "./Reveal";
 import VideoEmbed from "./VideoEmbed";
 import ChapterMark from "./ChapterMark";
@@ -28,6 +29,23 @@ export default function Briefing() {
               official intelligence briefing below.
             </p>
           </div>
+        </div>
+      </Reveal>
+
+      <Reveal className="mx-auto mt-10 max-w-md w-full" delay={80}>
+        <div className="doc-card torn p-3 -rotate-1">
+          <div className="relative aspect-[7/9] overflow-hidden">
+            <Image
+              src="/images/exhibit-a.png"
+              alt="Exhibit A: the nation, surrounded by suspects, on her deathbed"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 90vw, 28rem"
+            />
+          </div>
+          <p className="mt-3 text-center font-stamp uppercase tracking-[0.25em] text-[0.65rem] text-barn/80">
+            Exhibit A — Scene of the Alleged Crime
+          </p>
         </div>
       </Reveal>
 
